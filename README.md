@@ -11,8 +11,10 @@ Pymaceuticals, Inc. conducted a study to evaluate potential treatments for squam
 - Updated the count of unique mouse IDs for accuracy.
   
 **Summary Statistics**
-- Created a DataFrame of summary statistics, presenting mean, median, variance, standard deviation, and SEM of tumor volume for each drug regimen.
+Created a DataFrame of summary statistics, presenting mean, median, variance, standard deviation, and SEM of tumor volume for each drug regimen.
+  
 **Bar Charts and Pie Charts**
+  
 ***Bar Charts:***
 
 - Generated bar charts showcasing the total number of rows (Mouse ID/Timepoints) for each drug regimen throughout the study.
@@ -31,6 +33,7 @@ Pymaceuticals, Inc. conducted a study to evaluate potential treatments for squam
 - Highlighted potential outliers with distinctive colors and styles in a box plot using Matplotlib.
   
 **Line Plot and Scatter Plot**
+
 ***Line Plot:***
 Selected a single mouse treated with Capomulin and created a line plot depicting tumor volume versus time point for that mouse.
 
