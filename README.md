@@ -1,83 +1,50 @@
-# data-visualization
-What good is data without a good plot to tell the story?
+# Pymaceuticals - Analysis through Visualization
+In this assignment, the focus is on presenting a compelling narrative using data visualization techniques. Specializing in anti-cancer medications, the analysis applies Matplotlib to convey meaningful insights from a recent animal study involving squamous cell carcinoma (SCC) treatments. Let's explore the visual journey through the study results:
 
-In this assignment, you’ll apply what you've learned about Matplotlib to a real-world situation and dataset.
+### Background
+Pymaceuticals, Inc. conducted a study to evaluate potential treatments for squamous cell carcinoma (SCC), a common form of skin cancer. Over 45 days, 249 mice with SCC tumors received various drug regimens. The study's primary goal was to compare the performance of our drug of interest, Capomulin, against other treatment regimens.
 
-## Background
-You've just joined Pymaceuticals, Inc., a new pharmaceutical company that specializes in anti-cancer medications. Recently, it began screening for potential treatments for squamous cell carcinoma (SCC), a commonly occurring form of skin cancer.
+### Tasks Accomplished
+**Data Preparation**
+- Merged the mouse_metadata and study_results DataFrames into a single DataFrame for comprehensive analysis.
+- Checked for unique mouse IDs and identified duplicate time points. Cleaned the data by removing duplicates.
+- Updated the count of unique mouse IDs for accuracy.
+  
+**Summary Statistics**
+- Created a DataFrame of summary statistics, presenting mean, median, variance, standard deviation, and SEM of tumor volume for each drug regimen.
+**Bar Charts and Pie Charts**
+***Bar Charts:***
 
-As a senior data analyst at the company, you've been given access to the complete data from their most recent animal study. In this study, 249 mice who were identified with SCC tumors received treatment with a range of drug regimens. Over the course of 45 days, tumor development was observed and measured. The purpose of this study was to compare the performance of Pymaceuticals’ drug of interest, Capomulin, against the other treatment regimens.
+- Generated bar charts showcasing the total number of rows (Mouse ID/Timepoints) for each drug regimen throughout the study.
+- Created the first bar chart using the Pandas DataFrame.plot() method.
+- Generated the second bar chart with Matplotlib's pyplot methods.
+  
+***Pie Charts:***
 
-The executive team has tasked you with generating all of the tables and figures needed for the technical report of the clinical study. They have also asked you for a top-level summary of the study results.
+- Created pie charts illustrating the distribution of female versus male mice in the study.
+- Created the first pie chart using the Pandas DataFrame.plot() method.
+- Generated the second pie chart with Matplotlib's pyplot methods.
+  
+**Quartiles, Outliers, and Box Plot**
+- Calculated the final tumor volume of each mouse for four promising treatment regimens: Capomulin, Ramicane, Infubinol, and Ceftamin.
+- Determined the quartiles, IQR, and identified potential outliers across all four treatment regimens.
+- Highlighted potential outliers with distinctive colors and styles in a box plot using Matplotlib.
+  
+**Line Plot and Scatter Plot**
+***Line Plot:***
+Selected a single mouse treated with Capomulin and created a line plot depicting tumor volume versus time point for that mouse.
 
-### Instructions
-This assignment is broken down into the following tasks:
+***Scatter Plot:***
+Generated a scatter plot illustrating the relationship between mouse weight and average observed tumor volume for the entire Capomulin treatment regimen.
 
-- Prepare the data.
-
-- Generate summary statistics.
-
-- Create bar charts and pie charts.
-
-- Calculate quartiles, find outliers, and create a box plot.
-
-- Create a line plot and a scatter plot.
-
-- Calculate correlation and regression.
-
-Submit your final analysis.
-
-### Prepare the Data
-- Run the provided package dependency and data imports, and then merge the mouse_metadata and study_results DataFrames into a single DataFrame.
-
-- Display the number of unique mice IDs in the data, and then check for any mouse ID with duplicate time points. Display the data associated with that mouse ID, and then create a new DataFrame where this data is removed. Use this cleaned DataFrame for the remaining steps.
-
-- Display the updated number of unique mice IDs.
-
-### Generate Summary Statistics
-Create a DataFrame of summary statistics. Remember, there is more than one method to produce the results you're after, so the method you use is less important than the result.
-
-Your summary statistics should include:
-
-- A row for each drug regimen. These regimen names should be contained in the index column.
-
-- A column for each of the following statistics: mean, median, variance, standard deviation, and SEM of the tumor volume.
-
-### Create Bar Charts and Pie Charts
-- - Generate two bar charts. Both charts should be identical and show the total total number of rows (Mouse ID/Timepoints) for each drug regimen throughout the study.
-
-- Create the first bar chart with the Pandas DataFrame.plot() method.
-
-- Create the second bar chart with Matplotlib's pyplot methods.
-
-- - Generate two pie charts. Both charts should be identical and show the distribution of female versus male mice in the study.
-
-- Create the first pie chart with the Pandas DataFrame.plot() method.
-
-- Create the second pie chart with Matplotlib's pyplot methods.
-
-### Calculate Quartiles, Find Outliers, and Create a Box Plot
-- - Calculate the final tumor volume of each mouse across four of the most promising treatment regimens: Capomulin, Ramicane, Infubinol, and Ceftamin. Then, calculate the quartiles and IQR, and determine if there are any potential outliers across all four treatment regimens. Use the following substeps:
-
-- Create a grouped DataFrame that shows the last (greatest) time point for each mouse. Merge this grouped DataFrame with the original cleaned DataFrame.
-
-- Create a list that holds the treatment names as well as a second, empty list to hold the tumor volume data.
-
-- Loop through each drug in the treatment list, locating the rows in the merged DataFrame that correspond to each treatment. Append the resulting final tumor volumes for each drug to the empty list.
-
-- Determine outliers by using the upper and lower bounds, and then print the results.
-
-- - Using Matplotlib, generate a box plot that shows the distribution of the final tumor volume for all the mice in each treatment group. Highlight any potential outliers in the plot by changing their color and style.
-
-### Create a Line Plot and a Scatter Plot
-Select a single mouse that was treated with Capomulin, and generate a line plot of tumor volume versus time point for that mouse.
-
-Generate a scatter plot of mouse weight versus average observed tumor volume for the entire Capomulin treatment regimen.
-
-### Calculate Correlation and Regression
-Calculate the correlation coefficient and linear regression model between mouse weight and average observed tumor volume for the entire Capomulin treatment regimen.
+**Correlation and Regression**
+- Calculated the correlation coefficient and established a linear regression model between mouse weight and average observed tumor volume for the entire Capomulin treatment regimen.
+- Plotted the linear regression model on top of the scatter plot for visual interpretation.
+  
+### Conclusion
+Effective data visualization serves as a powerful tool for conveying complex insights. This visual analysis provides a comprehensive understanding of the study results, offering clear narratives for data-driven decision-making in the context of cancer medication research.
 
 Plot the linear regression model on top of the previous scatter plot.
 
-#### References
-Data generated by MockarooLinks to an external site., LLC (2022). Realistic Data Generator.
+### References
+Data generated by  [MockarooLinks to an external site.](https://mockaroo.com/), LLC (2022). Realistic Data Generator.
