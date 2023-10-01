@@ -1,4 +1,4 @@
-# Pymaceuticals - Analysis through Visualization
+# Pymaceuticals - Cancer Drug Regimen Analysis through Visualization
 In this assignment, the focus is on presenting a compelling narrative using data visualization techniques. Specializing in anti-cancer medications, the analysis applies Matplotlib to convey meaningful insights from a recent animal study involving squamous cell carcinoma (SCC) treatments. Let's explore the visual journey through the study results:
 
 ### Background
